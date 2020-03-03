@@ -5,7 +5,9 @@ $(function () {
     tabsFn()
     dataFn();
     // common.init();
-    // if ($('#mainPage').length) return main.init();
+    if ($('#mainPage').length) {
+        main.init();
+    }
 });
 
 // commonUI
@@ -144,12 +146,12 @@ var common = {
 // mainUI
 var main = {
     init: function () {
-        this.wayPoint();
+        // this.wayPoint();
         this.visualBannerList()
-        this.newsbarNewsList()
-        this.guideVideoList()
-        this.roadmapList()
-        this.newsList()
+        // this.newsbarNewsList()
+        // this.guideVideoList()
+        // this.roadmapList()
+        // this.newsList()
         // main.load();
         // main.visualActions();
         // main.facilityPictureList();
@@ -157,11 +159,12 @@ var main = {
     },
     visualBannerList: function () {
         $('#visualBannerList').slick({
-            autoplay: true,
+            // autoplay: true,
             autoplaySpeed: 5000,
             appendArrows: '#bannerArrow',
-            prevArrow: '<button type="button" class="slick-prev"><img src="/images/icon/btn_prev.png" alt="이전"></button>',
-            nextArrow: '<button type="button" class="slick-next"><img src="/images/icon/btn_next.png" alt="다음"></button>',
+            pauseOnHover: false,
+            // prevArrow: '<button type="button" class="slick-prev"><img src="/images/icon/btn_prev.png" alt="이전"></button>',
+            // nextArrow: '<button type="button" class="slick-next"><img src="/images/icon/btn_next.png" alt="다음"></button>',
             // infinite: false,
         });
     },

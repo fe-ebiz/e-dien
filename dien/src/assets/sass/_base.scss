@@ -52,10 +52,6 @@
 // @include btn-size(12px 0px, 13px);
 // @include btn-size(15px 90px, 18px);
 
-a {
-    text-decoration: none;
-}
-
 input {
     font-family: $font-stack;
 }
@@ -90,7 +86,6 @@ textarea {
     font-family: $font-stack;
     letter-spacing: normal;
 }
-
 
 img.bor {
     border: 1px solid #bbb;

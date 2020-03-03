@@ -11,8 +11,9 @@ $screen-lg-width: 1180px;
 
 $hd-ht-m: 45px;
 $hd-ht-pc: 80px;
+$hd-ht-pc-main: 60px;
 
-$font-stack: ('Noto Sans KR', sans-serif);
+$font-stack: ("Nanum Gothic", Sans-serif);
 $font-nnGothic: ("Nanum Gothic", Sans-serif);
 $font-nnSquareR: ("NanumSquareRound", Sans-serif);
 $font-ntss: ("Noto Sans KR", Sans-serif);
@@ -28,10 +29,10 @@ $font-gray4: #ccc;
 $bor-gray: #c9c9c9;
 $bor-gray2: #bababa;
 
-// $primary-color: #003f7c;
-$primary-color: #7954ff;
-$primary-color-dark: #183d62;
-$primary-color-deepdark: #ff732e;
+$primary-color: #a90863;
+$primary-font-color: #ff52ad;
+// $primary-color-dark: #183d62;
+// $primary-color-deepdark: #ff732e;
 
 // pc
 $gnb-hover-color: #5ca904;
