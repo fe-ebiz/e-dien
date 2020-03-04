@@ -1,0 +1,67 @@
+// visual 영역
+.brand-visual-sec {
+    position: relative;
+    // @include size(100%, 600px);
+
+    .visual-wrapper {
+        .visual-content {
+            height: 205px;
+            background: url('/img/brand/pagetitle_bg.jpg') no-repeat center / cover;
+
+            .visual-title {
+                text-align: center;
+                padding-top: 88px;
+            }
+        }
+    }
+}
+
+#brandPage .sec {
+    font-size: 16px;
+    color: $font-gray;
+    line-height: 1.7;
+}
+
+.brand-sec {
+    .brand-wrapper {
+        .brand-content {
+            h2.title {
+                margin-top: 40px;
+            }
+
+            h3.title {
+                margin-top: 50px;
+            }
+
+            .text-wrapper {
+                position: relative;
+
+                .text-1:first-child {
+                    margin-top: 25px;
+                }
+
+                .text-1:not(:first-child) {
+                    margin-top: 30px;
+                }
+
+                &.pd-l {
+                    padding-left: 12px;
+                    line-height: 1;
+
+                    border-left: 2px solid #cfcfcf;
+
+                    .mg {
+                        display: block;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.brand-terms-sec {
+    .brand-terms-wrapper {
+        .brand-terms-content {}
+    }
+}

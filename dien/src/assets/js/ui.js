@@ -8,6 +8,9 @@ $(function () {
     if ($('#mainPage').length) {
         main.init();
     }
+    if ($('#faqPage').length) {
+        faq.init();
+    }
 });
 
 // commonUI
@@ -306,7 +309,21 @@ var main = {
         //     );
         // });
     },
-};
+}
+
+// faqUI
+var faq = {
+    init: function () {
+        // this.faqTabFn();
+        this.faqListTabFn();
+    },
+    faqTabFn: function () {
+        toggleOn($('#faqPage .faq-sec [data-role=toggleOn] .btn'));
+    },
+    faqListTabFn: function () {
+        toggleOn($('#faqList .faq-item'));
+    }
+}
 
 var targetHide = {
     self: function (obj) {
@@ -331,6 +348,67 @@ var targetHide = {
             // console.log(e.target);
         });
     }
+}
+
+// 모달 영역
+var modalFn = {
+    enter: function (obj) {
+        obj.addClass('enter');
+        obj.focus();
+        $("#wrap").attr('aria-hidden', true);
+    },
+    leave: function (obj, lastFocus) {
+        obj.addClass('leave');
+        obj.removeClass('enter');
+        setTimeout(function () {
+            obj.removeClass('leave');
+        }, 300);
+        $("#wrap").attr('aria-hidden', false);
+        if (lastFocus) lastFocus.focus();
+    }
+}
+
+// 탭 용 label
+var labelTabFn = {
+    checkbox: function (obj) {
+        var chk = obj.is(':checked');
+
+        obj.closest('label').toggleClass('active');
+        // console.log(obj.prop('checked'));
+        obj.prop('checked') ? obj.prop('checked', false) : obj.prop('checked', true);
+        // console.log(obj.prop('checked'));
+    },
+    radio: function (obj) {
+        var chk = obj.is(':checked');
+        var tabWrapper = $('[data-fn-type=tabs]');
+
+        tabWrapper.find('label').removeClass('active');
+        obj.closest('label').addClass('active');
+        // el.addClass('active');
+        // console.log(obj.prop('checked'));
+        if (!chk) return obj.prop('checked', true);
+        // console.log(obj.prop('checked'));
+    }
+}
+
+var toggleTabFn = {
+    seleted_tab: function () {
+        var tabWrapper = $('[data-fn-type=toggle-tab]');
+        // var bool = optionList.is(":hidden");
+        // optionList.attr('hidden',!bool);
+        tabWrapper.children('li').on('click', function () {
+            $(this).toggleClass('active').siblings().removeClass('active');
+        });
+    },
+    init: function () {
+        this.seleted_tab();
+    }
+}
+
+function toggleOn(obj) {
+    $(obj).on('click', function () {
+        $(this).addClass('on').siblings().removeClass('on');
+    })
 }
 
 function anotherTargetToggle(obj) {
@@ -406,61 +484,6 @@ function dataFn() {
             $("#wrap").attr('aria-hidden', false);
             lastFocus.focus();
         }
-    }
-}
-
-// 모달 영역
-var modalFn = {
-    enter: function (obj) {
-        obj.addClass('enter');
-        obj.focus();
-        $("#wrap").attr('aria-hidden', true);
-    },
-    leave: function (obj, lastFocus) {
-        obj.addClass('leave');
-        obj.removeClass('enter');
-        setTimeout(function () {
-            obj.removeClass('leave');
-        }, 300);
-        $("#wrap").attr('aria-hidden', false);
-        if (lastFocus) lastFocus.focus();
-    }
-}
-
-// 탭 용 label
-var labelTabFn = {
-    checkbox: function (obj) {
-        var chk = obj.is(':checked');
-
-        obj.closest('label').toggleClass('active');
-        // console.log(obj.prop('checked'));
-        obj.prop('checked') ? obj.prop('checked', false) : obj.prop('checked', true);
-        // console.log(obj.prop('checked'));
-    },
-    radio: function (obj) {
-        var chk = obj.is(':checked');
-        var tabWrapper = $('[data-fn-type=tabs]');
-
-        tabWrapper.find('label').removeClass('active');
-        obj.closest('label').addClass('active');
-        // el.addClass('active');
-        // console.log(obj.prop('checked'));
-        if (!chk) return obj.prop('checked', true);
-        // console.log(obj.prop('checked'));
-    }
-}
-
-var toggleTabFn = {
-    seleted_tab: function () {
-        var tabWrapper = $('[data-fn-type=toggle-tab]');
-        // var bool = optionList.is(":hidden");
-        // optionList.attr('hidden',!bool);
-        tabWrapper.children('li').on('click', function () {
-            $(this).toggleClass('active').siblings().removeClass('active');
-        });
-    },
-    init: function () {
-        this.seleted_tab();
     }
 }
 

@@ -1,0 +1,74 @@
+@@include('../inc/_top.html', { "pageName": "faq" })
+
+<main id="container" class="container" role="main">
+    <section class="sec faq-visual-sec">
+        <div class="visual-wrapper">
+            <div class="visual-content">
+                <h1 class="visual-title">
+                    <img src="/img/faq/pagetitle.png" alt="브랜드 디엔">
+                </h1>
+            </div>
+        </div>
+    </section>
+    <!-- /.sec.main-visual-sec -->
+
+    @@include('../inc/common/_path.html', {
+    "path1": "<a href='/views/faq/index.html' class='point'><span class='label'>자주묻는 질문</span></a>",
+    "path2": ""
+    })
+
+    <section class="sec faq-sec">
+        <div class="faq-wrapper wrapper-type1">
+            <div class="faq-content group group-type1">
+                <h1 class="title-type1 title">
+                    <img src="/img/faq/title.jpg" alt="디엔 브랜드 스토리">
+                    <span class="btn-cover" data-role="toggleOn">
+                        <!-- 해당 탭에 클래스 on 추가 -->
+                        <a href="javascript:;" class="btn on"><img src="/img/common/icon/icon_magnify.png" alt="찾기" class="icon">이엔티비</a>
+                        <a href="javascript:;" class="btn"><img src="/img/common/icon/icon_magnify.png" alt="찾기" class="icon">스파이더 브라켓</a>
+                        <a href="javascript:;" class="btn"><img src="/img/common/icon/icon_magnify.png" alt="찾기" class="icon">프라엔 디스포저</a>
+                    </span>
+                </h1>
+                <ul class="kinds-list">
+                    <!-- 해당 탭에 클래스 on 추가 -->
+                    <li class="kinds-item on"><a href="">제품 및 성능</a></li>
+                    <li class="kinds-item"><a href="">화질/소리</a></li>
+                    <li class="kinds-item"><a href="">외부연결</a></li>
+                    <li class="kinds-item"><a href="">리모컨 관련</a></li>
+                    <li class="kinds-item"><a href="">배송/설치 관련</a></li>
+                    <li class="kinds-item"><a href="">기타</a></li>
+                </ul>
+                <div class="faq-list-wrapper">
+                    <h2 class="title">이엔티비 FAQ</h2>
+                    <!-- 예시 리스트 -->
+                    <ul class="faq-list" id="faqList">
+                        <li class="faq-item question on">
+                            HD와 FULL-HD의 차이는 무엇입니까?
+                        </li>
+                        <li class="faq-item answer">
+                            흔희 디지털 TV에서 말하는 HD와 FULL-HD는 해상도, 즉 픽셀 수의 차이를 말 합니다.
+                            TV나 모니터등의 디스플레이는 가까이 다가서면 작은 점들을 볼수 있습니다. 이 작은 점들 하나 하나가 각자 다른 색을 내면서 마치 모자이크처럼 디스플레이에 화면을 만들어내는데. 이 점들을 픽셀 이라고 합니다.
+                            우리가 흔히 이야기 하는 해상도는 이 픽셀의 개수를 나타내는데 HD급인 1366x768 해상도는 이 픽셀이 가로로 1366개가 나열된 줄이 세로로 768줄이 있다는것 을 의미합니다.
+                            그리고 FULL-HD는 1920x1080의 해상도를 지니며 해상도가 높을수록 픽셀의 사이즈는 작아지고 픽셀이 갯수가 많아지게 됩니다.
+                            픽셀의 사이즈가 작을수록 더 선명하게 보이게 됩니다. 하지만 TV만 FULL-HD 해상도를 지니고 있다해서 모든 영상을 FULL-HD급으로 보실순 없습니다.
+                            TV에 공급해주는 입력신호가 FULL-HD급이여야 그 화질을 재생 해는것을 말합니다.
+                            따라서 TV를 PC등에 연결해서 쓸때, 해상도가 높을수록 사용하기 편하고 더욱 고화질의 영상을 감상하실 수 있습니다.
+                        </li>
+                        <li class="faq-item question">
+                            HD와 FULL-HD의 차이는 무엇입니까?
+                        </li>
+                        <li class="faq-item answer">
+                            흔희 디지털 TV에서 말하는 HD와 FULL-HD는 해상도, 즉 픽셀 수의 차이를 말 합니다.
+                            TV나 모니터등의 디스플레이는 가까이 다가서면 작은 점들을 볼수 있습니다.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.sec faq-sec -->
+
+</main>
+<!-- /.main.container -->
+
+@@include('../inc/_bottom.html')

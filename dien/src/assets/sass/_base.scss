@@ -129,67 +129,82 @@ img.bor {
 
 // mobile & tablet
 // @media (max-width: 991px) {
-@media (max-width: $screen-md-width - 1px) {
-    .group {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+// @media (max-width: $screen-md-width - 1px) {
+//     .group {
+//         padding-left: 10px;
+//         padding-right: 10px;
+//     }
 
-    .form-textarea,
-    .form-input {
-        @include form-base($ht: 40px);
-    }
+//     .form-textarea,
+//     .form-input {
+//         @include form-base($ht: 40px);
+//     }
+// }
+
+// // mobile
+// @media (min-width: $screen-xs-width) and (max-width: $screen-sm-width - 1px) {
+
+//     .group-f,
+//     .group {
+//         width: 540px;
+//     }
+// }
+
+// // tablet
+// @media (min-width: $screen-sm-width) and (max-width: $screen-md-width - 1px) {
+
+//     .group-f,
+//     .group {
+//         width: 720px;
+//     }
+// }
+
+// // pc
+// @media (min-width: $screen-md-width) {
+
+//     .form-textarea,
+//     .form-input {
+//         @include form-base;
+//     }
+// }
+
+// // pc md
+// // @media (min-width: 992px) and (max-width: 999px) {
+// @media (min-width: $screen-md-width) and (max-width: $screen-lg-width + $vertical-scroll - 1px) {
+
+//     .group-f,
+//     .group {
+//         width: 960px;
+//     }
+// }
+
+// // pc lg
+// @media (min-width: $screen-lg-width + $vertical-scroll) {
+
+//     .group-f,
+//     .group {
+//         width: $screen-lg-width;
+//     }
+
+//     .group {
+//         padding-left: 20px;
+//         padding-right: 20px;
+//     }
+// }
+
+.group-f,
+.group {
+    width: $screen-lg-width;
 }
 
-// mobile
-@media (min-width: $screen-xs-width) and (max-width: $screen-sm-width - 1px) {
-
-    .group-f,
-    .group {
-        width: 540px;
-    }
+.group {
+    padding-left: $screen-lg-pd;
+    padding-right: $screen-lg-pd;
 }
 
-// tablet
-@media (min-width: $screen-sm-width) and (max-width: $screen-md-width - 1px) {
-
-    .group-f,
-    .group {
-        width: 720px;
-    }
-}
-
-// pc
-@media (min-width: $screen-md-width) {
-
-    .form-textarea,
-    .form-input {
-        @include form-base;
-    }
-}
-
-// pc md
-// @media (min-width: 992px) and (max-width: 999px) {
-@media (min-width: $screen-md-width) and (max-width: $screen-lg-width + $vertical-scroll - 1px) {
-
-    .group-f,
-    .group {
-        width: 960px;
-    }
-}
-
-// pc lg
-@media (min-width: $screen-lg-width + $vertical-scroll) {
-
-    .group-f,
-    .group {
-        width: $screen-lg-width;
-    }
-
-    .group {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+.form-textarea,
+.form-input {
+    @include form-base;
 }
 
 .btn {
@@ -388,6 +403,10 @@ a.btn>* {
     color: $c-blue !important;
 }
 
+.c-pink {
+    color: $c-pink !important;
+}
+
 .bor-no {
     border: none !important;
 }
@@ -409,7 +428,8 @@ a.btn>* {
 
 .fadeInRight,
 .fadeInLeft,
-.fadeInUp {
+.fadeInUp,
+.fadeIn {
     visibility: visible;
 }
 
@@ -488,6 +508,31 @@ a.btn>* {
 .fadeInRight {
     -webkit-animation-name: fadeInRight;
     animation-name: fadeInRight;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
 }
 
 .pop-mask {

@@ -6,7 +6,7 @@ $screen-xxs-width: 320px;
 $screen-xs-width: 576px;
 $screen-sm-width: 768px;
 $screen-md-width: 992px;
-$screen-lg-pd: 20px;
+$screen-lg-pd: 65px;
 $screen-lg-width: 1180px;
 
 $hd-ht-m: 45px;
@@ -21,9 +21,10 @@ $font-dt: (Dotum, Sans-serif);
 $font-jfss: ('Josefin Sans', sans-serif);
 
 $font-color: #141414;
-$font-gray: #858585;
+$font-gray: #707070;
 $font-gray2: #ababab;
 $font-gray3: #525252;
+
 $font-gray4: #ccc;
 
 $bor-gray: #c9c9c9;
@@ -46,6 +47,7 @@ $gnb-menu-hover: #54a73a;
 
 $fg-page-tit: #f4774d;
 
+$btn-primary: #df65aa;
 $btn-blue: #337ab7;
 $btn-blue-dark: #2e6da4;
 $btn-green: #5cb85c;
@@ -68,6 +70,7 @@ $c-lightbrown: #d35e00;
 $c-blue: #5961e8;
 $c-darkblue: #315b84;
 $c-purple: #7954ff;
+$c-pink: #ff088a;
 
 // admin variables
 $admin-body-c: #646c9a;

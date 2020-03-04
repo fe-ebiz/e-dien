@@ -1,0 +1,147 @@
+// visual 영역
+.faq-visual-sec {
+    position: relative;
+    // @include size(100%, 600px);
+
+    .visual-wrapper {
+        .visual-content {
+            height: 205px;
+            background: url('/img/faq/pagetitle_bg.jpg') no-repeat center / cover;
+
+            .visual-title {
+                text-align: center;
+                padding-top: 88px;
+            }
+        }
+    }
+}
+
+#brandPage .sec {
+    font-size: 16px;
+    color: #707070;
+    line-height: 1.7;
+}
+
+.sec.faq-sec {
+    .faq-wrapper {
+        .faq-content {
+            h1.title {
+                .btn {
+                    font-family: $font-ntss;
+                    border-color: #b7b7b7;
+                    border-radius: 0;
+                    @include btn-size(2.5px 15px, 18px);
+                    font-weight: 500;
+                    color: #979797;
+                    letter-spacing: -0.5px;
+
+                    .icon {
+                        display: none;
+                        position: relative;
+                        top: -1px;
+                        margin-right: 3px;
+                        margin-left: -5px;
+                    }
+
+                    &.on {
+                        background-color: $btn-primary;
+                        border-color: $btn-primary;
+                        color: #fff;
+
+                        .icon {
+                            display: inline-block;
+                        }
+                    }
+
+                    &:first-of-type {
+                        margin-left: 15px;
+                    }
+
+                    &:not(:first-of-type) {
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+            .kinds-list {
+                padding: 20px 0;
+                text-align: center;
+
+                .kinds-item {
+                    display: inline-block;
+                    margin: 0 10px;
+
+                    >a {
+                        font-size: 18px;
+                        color: $font-gray;
+                    }
+
+                    &.on>a {
+                        color: $primary-font-color;
+                        font-weight: 700;
+
+                        &:before {
+                            content: '[';
+                        }
+
+                        &:after {
+                            content: ']';
+                        }
+                    }
+                }
+            }
+
+            .faq-list-wrapper {
+                border-top: 1px solid #bbb;
+                color: $font-gray;
+                line-height: 1.7;
+
+                h2.title {
+                    padding: 10px 10px;
+                    background-color: #f2f2f2;
+                }
+
+                .faq-list {
+                    border-top: 1px solid #bbb;
+
+                    .faq-item {
+                        padding: 10px 10px;
+                        padding-left: 40px;
+                        border-bottom: 1px solid #bbb;
+                        word-break: keep-all;
+
+                        &:before {
+                            position: absolute;
+                            left: 10px;
+                        }
+
+                        &.question {
+                            &:before {
+                                content: 'Q';
+                            }
+
+                            &.on {
+                                background-color: #f3f8fe;
+                                color: #3850a2;
+
+                                &+.answer {
+                                    display: block;
+                                }
+                            }
+                        }
+
+                        &.answer {
+                            display: none;
+                            padding-top: 20px;
+                            padding-bottom: 20px;
+
+                            &:before {
+                                content: 'A';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

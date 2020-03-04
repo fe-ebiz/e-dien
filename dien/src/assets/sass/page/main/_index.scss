@@ -36,97 +36,125 @@
                         height: 888px;
 
                         .banner-title {
-                            animation-duration: 1.8s;
-                            animation-delay: .3s;
+                            animation-duration: 0.9s;
+                            animation-delay: .15s;
                             animation-fill-mode: both;
                             visibility: hidden;
+                        }
+
+                        .banner-actions {
+                            position: relative;
+                            animation-duration: 0.9s;
+                            animation-delay: .15s;
+                            animation-fill-mode: both;
+                            visibility: hidden;
+
+                            .tv-list {
+                                font-size: 0;
+                                text-align: center;
+
+                                .tv-item {
+                                    display: inline-block;
+                                    margin: 0 15px;
+
+                                    .picture {
+
+                                        >img {
+                                            position: relative;
+                                            display: inline-block;
+                                            transition: all .15s linear;
+
+                                            &:hover {
+                                                transform: translateY(-5px);
+                                            }
+                                        }
+
+                                        >figcaption {
+                                            margin-top: 5px;
+                                            font-size: 13px;
+                                            color: #fff;
+                                            letter-spacing: -0.7px;
+                                        }
+                                    }
+
+                                    &.pdt-55uhd-curved {
+                                        margin: 0 3px;
+                                    }
+                                }
+                            }
                         }
 
                         &.slick-active {
                             .banner-title {
                                 visibility: visible;
-                                // opacity: 1;
                                 -webkit-animation-name: fadeInUp;
                                 animation-name: fadeInUp;
+                            }
+
+                            .banner-actions {
+                                visibility: visible;
+                                -webkit-animation-name: fadeIn;
+                                animation-name: fadeIn;
+                            }
+                        }
+
+                        @for $i from 1 through 5 {
+                            &.item-#{$i} {
+                                background: url('http://img.entv.co.kr/dien/main/visual/visual_#{$i}.jpg') no-repeat center / cover;
                             }
                         }
 
                         &.item-1 {
-                            background: url('http://img.entv.co.kr/dien/main/visual/visual_1.jpg') no-repeat;
-
                             .banner-title {
                                 @include center(940px);
                                 padding-top: 100px;
+                            }
+
+                            .banner-actions {
+                                margin-top: 600px;
+                                left: -25px;
                             }
                         }
 
                         &.item-2 {
-                            background: url('http://img.entv.co.kr/dien/main/visual/visual_2.jpg') no-repeat;
-
                             .banner-title {
                                 @include center(920px);
                                 padding-top: 100px;
                             }
+
+                            .banner-actions {
+                                margin-top: 500px;
+                                left: -25px;
+                            }
                         }
 
                         &.item-3 {
-                            background: url('http://img.entv.co.kr/dien/main/visual/visual_3.jpg') no-repeat;
-
                             .banner-title {
                                 @include center(940px);
+                                padding-top: 100px;
+                            }
+
+                            .banner-actions {
+                                margin-top: 583px;
+                                left: -25px;
+                            }
+                        }
+
+                        &.item-4 {
+                            .banner-title {
+                                @include center(1080px);
+                                padding-top: 60px;
+                            }
+                        }
+
+                        &.item-5 {
+                            .banner-title {
+                                @include center(960px);
                                 padding-top: 100px;
                             }
                         }
                     }
                 }
-            }
-
-            .banner-actions {
-                margin-top: 60px;
-                padding: 0 10px;
-                box-sizing: border-box;
-                font-size: 0;
-                text-align: center;
-
-                .btn {
-                    width: 250px;
-                    height: 60px;
-                    @include btn-size(16px 0, 18px);
-                    font-weight: 500;
-                    border-radius: 35px;
-                    color: #fff;
-                    background-color: rgba(255, 255, 255, 0.2);
-                    border: 1px solid #fff;
-                    transition: color .3s;
-                    transition: background-color .3s;
-
-                    &:hover {
-                        background-color: #fff;
-                        color: $font-color;
-                    }
-
-                    &+.btn {
-                        margin-left: 20px;
-                    }
-
-                }
-
-                // .white {
-                //     background-color: #fff;
-                //     color: $font-color;
-                // }
-
-                // .outline {
-                //     color: #fff;
-                //     background-color: rgba(255, 255, 255, 0.2);
-                //     border: 1px solid #fff;
-                // }
-
-                .inquiry-btn {
-                    margin: 0 auto;
-                }
-
-                .paper-btn {}
             }
         }
     }
