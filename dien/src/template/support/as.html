@@ -1,32 +1,211 @@
 @@include('../inc/_top.html', { "pageName": "support" })
 
 <main id="container" class="container" role="main">
-    <section class="sec brand-visual-sec">
+    <section class="sec support-visual-sec">
         <div class="visual-wrapper">
             <div class="visual-content">
                 <h1 class="visual-title">
-                    <img src="/img/brand/pagetitle.png" alt="브랜드 디엔">
+                    <img src="/img/support/pagetitle.png" alt="고객지원">
                 </h1>
             </div>
         </div>
     </section>
-    <!-- /.sec.main-visual-sec -->
 
     @@include('../inc/common/_path.html', {
     "path1": "고객지원",
     "path2": "<span class='arr'>▶</span> <a href='#' class='point'><span class='label'>AS기준안내</span></a>"
     })
 
-    <section class="sec brand-terms-sec">
-        <div class="brand-terms-wrapper wrapper-type1">
-            <div class="brand-terms-content group group-type1">
+    <section class="sec support-as-sec">
+        <div class="as-wrapper wrapper-type1">
+            <div class="as-content group group-type1">
                 <h1 class="title-type1">
-                    <img src="/img/brand/title_use.jpg" alt="디엔 브랜드 스토리">
+                    <img src="/img/support/title_as.jpg" alt="as 기준안내">
                 </h1>
+                <div class="text-wrapper">
+                    <h2 class="title c-pink">보증기간 안내</h2>
+                    <table class="tbl-type1 as-tbl">
+                        <colgroup>
+                            <col style="width: 170px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>정품기준</th>
+                                <td>
+                                    이엔티비 정품은 온라인 쇼핑몰 등에서 구입하실 수 있으며 구입 시 영수증을 꼭 보관하여 주십시오.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>제품 산정 기준</th>
+                                <td>
+                                    제품 보증기간이라함은 제조사 또는 제품 판매자가 소비자에게 정상적인 상태에서 자연 발생한 품질 성능 기능 하자에 대하여 무료 수리해 주겠다고 약속하는 기간을 말합니다.<br>
+                                    제품 보증기간은 구입 일자를 기준으로 산정하여 구입일자의 확인은 보증서 또는 구입 영수증을 기준으로 합니다. (보증기간 이내에 정상적으로 사용한 상태에서 발생된 공장의 경우)
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2 class="title c-pink">무상수리</h2>
+                    <table class="tbl-type1 as-tbl">
+                        <colgroup>
+                            <col>
+                            <col style="width: 220px">
+                        </colgroup>
+                        <tbody class="ta-center">
+                            <tr>
+                                <th>소비자 피해유형</th>
+                                <th>보상기준</th>
+                            </tr>
+                            <tr>
+                                <td>구입 후 10일 이내 정상적인 사용상태에서 발생한 성능, 기능상의 하자로 중요한 수리 시</td>
+                                <td>제품교환</td>
+                            </tr>
+                            <tr>
+                                <td>구입 후 1개월 이내 정상적인 사용상태에서 발생한 성능, 기능상의 하자로 중요한 수리 시</td>
+                                <td>제품교환</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="tbl-type1 as-tbl">
+                        <colgroup>
+                            <col>
+                            <col style="width: 130px">
+                            <col style="width: 235px">
+                            <col style="width: 170px">
+                            <col style="width: 170px">
+                        </colgroup>
+                        <tbody class="ta-center">
+                            <tr>
+                                <th colspan="3">소비자 피해유형</th>
+                                <th>보증기간 이내</th>
+                                <th>보증기간 경과 후</th>
+                            </tr>
+                            <tr>
+                                <td class="ta-left" rowspan="3">
+                                    정상적인 사용상태에서
+                                    자연 발생한 성능, 기능상의 하자
+                                    (제품 보유기간 내)
+                                </td>
+                                <td rowspan="2">수리 가능시</td>
+                                <td>하자 발생시</td>
+                                <td>무상수리</td>
+                                <td>유상수리</td>
+                            </tr>
+                            <tr>
+                                <td class="ta-left">
+                                    동일 하자에 대해 3회까지
+                                    수리하였으나 고장이 발생한
+                                    경우(4회째)
+                                </td>
+                                <td>제품교환</td>
+                                <td>유상수리</td>
+                            </tr>
+                            <tr>
+                                <td>수리 불가능</td>
+                                <td class="ta-left">
+                                    부품 보유 기간 이내에 수리용
+                                    부품을 보유하고 있지 않을 시
+                                </td>
+                                <td colspan="2">제품교환</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="ta-left">
+                                    소비자의 고의, 과실에
+                                    의한 성능, 기능상의 고장
+                                </td>
+                                <td colspan="2">수리 가능시</td>
+                                <td colspan="2">수리 가능시</td>
+                            </tr>
+                            <tr>
+                                <td class="ta-left" colspan="2">
+                                    수리 불가능
+                                    (성능, 기능상의 하자가 아닌 외관 불량으로 수리가
+                                    불가능한 경우는 제외)
+                                </td>
+                                <td class="ta-left">
+                                    유상 수리에
+                                    해당하는 금액 징수
+                                    후, 제품 교환
+                                </td>
+                                <td class="ta-left">
+                                    별도로 정하는 당사
+                                    기준에 한함
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2 class="title c-pink">유상수리</h2>
+                    <table class="tbl-type1 as-tbl">
+                        <colgroup>
+                            <col>
+                        </colgroup>
+                        <tbody class="ta-left">
+                            <tr>
+                                <th>1. 고객의 과실로 인하여 제품이 고장 난 경우</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    제품 내의 이물질(물, 음료, 장난감 등)을 투입하여 고장난 경우<br>
+                                    제품을 떨어트리거나, 외부 충격을 가함으로써 파손 및 고장난 경우<br>
+                                    신나, 벤젠 등 유기용제를 사용하여 손상 및 외부 변경이 발생한 경우<br>
+                                    고객이 제품을 임의로 분해하여 부품이 분실 또는 파손된 경우<br>
+                                    수리기사가 아닌 사람이 수리 또는 개조하여 고장난 경우<br>
+                                    기타 고객과실에 의해 고장난 경우<br>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="tbl-type1 as-tbl">
+                        <colgroup>
+                            <col style="width: 50%">
+                            <col style="width: 50%">
+                        </colgroup>
+                        <tbody>
+                            <tr class="ta-left">
+                                <th colspan="2">2. 기구 세척, 조정, 사용 설명 등은 제품 고장이 아닙니다.&nbsp;&nbsp;&nbsp;&nbsp;* 수리가 불가능한 경우, 별도 기준에 한함</th>
+                            </tr>
+                            <tr>
+                                <td>1회 무상, 1회부터 유상</td>
+                                <td>
+                                    사용설명 및 분해하지 않고 간단한 조정 시
+                                    외부 안테나 및 유선신호 관련 서비스 요청 시
+                                    판매점에서 부실하게 설치해주어 재설비 요청 시
+                                    제품 내부에 먼지 세척 및 이물질 제거 시
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1회부터 유상</td>
+                                <td>
+                                    제품의 이동, 이사 등으로 인한 설치 부실 건
+                                    구입 시 고객 요구로 설치한 후 재설치 시
+                                    소비자 성치 미숙으로 재설치 할 경우
+                                    이물 투입 서비스 요청 시
+                                    네트워크 및 타사 프로그램 사용 설명
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="tbl-type1 as-tbl">
+                        <colgroup>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr class="ta-left">
+                                <th>3. 그 밖의 경우</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    낙뢰, 화재, 염해, 풍수해, 가스, 지진 등 천재지변에 의해 고장난 경우<br>
+                                    소모성 부품의 수명이 다한 경우 (배터리, 램프류 등)
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </section>
-    <!-- /.sec brand-terms-sec -->
+    <!-- /.sec support-as-sec -->
 
 </main>
 <!-- /.main.container -->

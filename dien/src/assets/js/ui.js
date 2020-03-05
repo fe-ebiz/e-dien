@@ -4,7 +4,7 @@ $(function () {
 
     tabsFn()
     dataFn();
-    // common.init();
+    common.init();
     if ($('#mainPage').length) {
         main.init();
     }
@@ -15,6 +15,12 @@ $(function () {
 
 // commonUI
 var common = {
+    init: function () {
+        // common.load();
+        common.scroll();
+        common.nav();
+        // common.resize();
+    },
     common: function () {
         var wdVar = 0;
         var hdHtVar = 0;
@@ -137,13 +143,6 @@ var common = {
         });
         targetHide.self('#navBar');
     },
-    init: function () {
-        common.load();
-        common.scroll();
-        common.nav();
-        // common.resize();
-    }
-
 }
 
 // mainUI

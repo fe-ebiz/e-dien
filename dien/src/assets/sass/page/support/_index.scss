@@ -1,0 +1,152 @@
+.tbl-type1 {
+    width: 100%;
+    letter-spacing: -0.5px;
+
+    margin-top: 5px;
+
+    &+.as-tbl {
+        margin-top: 25px;
+    }
+
+    &.detail-tbl {
+        td.content {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        &+.list-tbl {
+            margin-top: 50px;
+        }
+    }
+
+    &.list-tbl {
+        tr.on {
+            background-color: #fefeee;
+            color: $c-pink;
+        }
+    }
+
+    tr {
+        border-top: 1px solid #bfbfbf;
+        border-bottom: 1px solid #bfbfbf;
+    }
+
+    th,
+    td {
+        padding: 10px 20px;
+        vertical-align: middle;
+        word-break: keep-all;
+
+        &:not(:first-child) {
+            border-left: 1px solid #bfbfbf;
+        }
+    }
+
+    th {
+        background-color: #fafafa;
+    }
+
+    &.bd-x-0 {
+
+        th,
+        td {
+            &:not(:first-child) {
+                border-left: none;
+            }
+        }
+    }
+}
+
+.pagenation.type1 {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+
+    a {
+        display: inline-block;
+        font-size: 13px;
+        vertical-align: middle;
+        color: #919191;
+        font-family: "Nanum Gothic";
+        font-weight: 600;
+
+        &.no {
+            width: 32px;
+            height: 32px;
+            line-height: 2.4;
+            border: 1px solid #d2d2d2;
+        }
+
+        &.no.on,
+        &.no:hover {
+            background-color: #9b9b9b;
+            color: #fff;
+        }
+
+        &[class*=arrow] {
+            border: none;
+            font-size: 20px;
+
+            [class*=fa-angle] {
+                position: relative;
+                top: -1px;
+                font-size: 18px;
+            }
+        }
+
+        &.arrow {
+            margin: 0 15px;
+        }
+
+        &.arrow-end {
+            letter-spacing: -2.5px;
+        }
+    }
+}
+
+// 공지사항 영역
+.support-notice-sec {
+    .notice-wrapper {
+        .notice-content {}
+    }
+}
+
+// 제품보증정책 영역
+.support-warranty-sec {
+    .warranty-wrapper {
+        .warranty-content {
+            h2.title {
+                margin-top: 30px;
+                font-size: 20px;
+            }
+
+
+            .text-wrapper {
+                position: relative;
+
+                .text-2 {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+// as기준안내 영역
+.support-as-sec {
+    .as-wrapper {
+        .as-content {
+            h2.title {
+                margin-top: 30px;
+                font-size: 20px;
+            }
+
+            .text-wrapper {
+                position: relative;
+
+                .as-tbl {}
+            }
+        }
+    }
+}

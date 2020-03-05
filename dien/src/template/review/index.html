@@ -1,26 +1,26 @@
-@@include('../inc/_top.html', { "pageName": "support" })
+@@include('../inc/_top.html', { "pageName": "review" })
 
 <main id="container" class="container" role="main">
-    <section class="sec support-visual-sec">
+    <section class="sec review-visual-sec">
         <div class="visual-wrapper">
             <div class="visual-content">
                 <h1 class="visual-title">
-                    <img src="/img/support/pagetitle.png" alt="고객지원">
+                    <img src="/img/review/pagetitle.png" alt="이용후기">
                 </h1>
             </div>
         </div>
     </section>
 
     @@include('../inc/common/_path.html', {
-    "path1": "고객지원",
-    "path2": "<span class='arr'>▶</span> <a href='#' class='point'><span class='label'>공지사항</span></a>"
+    "path1": "<a href='#' class='point'><span class='label'>이용후기</span></a>",
+    "path2": ""
     })
 
-    <section class="sec support-notice-sec">
-        <div class="notice-wrapper wrapper-type1">
-            <div class="notice-content group group-type1">
-                <h1 class="title-type1 notice-title">
-                    <img src="/img/support/title_notice.jpg" alt="공지사항">
+    <section class="sec review-sec">
+        <div class="review-wrapper wrapper-type1">
+            <div class="review-content group group-type1">
+                <h1 class="title-type1 bor-no review-title">
+                    <img src="/img/review/title.jpg" alt="이용후기">
                 </h1>
                 <div class="tbl-wrapper">
                     <!-- 공지사항 리스크 클릭시 (포스트 id 값이 있을 경우) -->
@@ -28,22 +28,27 @@
                         <colgroup>
                             <col>
                             <col style="width: 170px">
+                            <col style="width: 150px">
                         </colgroup>
                         <thead>
                             <tr>
-                                <th class="ta-left">ENTV 물류직배송에 관하여 알려드립니다.</th>
-                                <th>2015.12.01</th>
+                                <th>제목</th>
+                                <th>기종</th>
+                                <th>작성자</th>
+                            </tr>
+                        </thead>
+                        <thead>
+                            <tr>
+                                <th class="ta-left">가성비 넘치는 이엔티비 32인치의 퍼포먼스</th>
+                                <td class="ta-center">DIEN32H-MT</td>
+                                <th>보람아*</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="ta-left content" colspan="2">
-                                    안녕하세요. ENTV 고객센터 입니다.<br>
-                                    ENTV의 배송정책 안내해 드립니다.<br>
+                                <td class="ta-left content" colspan="3">
+                                    가성비 넘치는 이엔티비 32인치의 퍼포먼스<br>
                                     <br>
-                                    타업체의 경우 화물택배를 이용한 배송과는 달리 저희 ENTV는 전문물류 배송기사님의 물류직배송을 기본원칙으로 운영하고 있습니다.<br>
-                                    이는 고객님이 신청하신 제품을 보다 안전하게 배송하기 위함이며, 55인치 LED TV의 경우 무게와 큰 부피로 인해 찌그러짐,배송중 파손등의 배송사고가 발생될수 있는 부분을 원천적으로 해소해줄 것이라 생각합니다.<br>
-                                    저희 ENTV는 앞으로도 고객님들의 편의를 위해 보다더 나은 서비스로 나가갈수 있도록 노력하겠습니다.<br>
                                     감사합니다.<br>
                                 </td>
                             </tr>
@@ -54,22 +59,26 @@
                         <colgroup>
                             <col>
                             <col style="width: 170px">
+                            <col style="width: 150px">
                         </colgroup>
                         <thead>
                             <tr>
                                 <th>제목</th>
-                                <th>등록일</th>
+                                <th>기종</th>
+                                <th>작성자</th>
                             </tr>
                         </thead>
                         <tbody>
                             <!-- 선택 포스트 클래스 on 추가 -->
                             <tr class="on">
-                                <td class="ta-left">ENTV 물류직배송에 관하여 알려드립니다.</td>
-                                <td class="ta-center">2015.12.01</td>
+                                <td class="ta-left">가성비 넘치는 이엔티비 32인치의 퍼포먼스</td>
+                                <td class="ta-center">DIEN32H-MT</td>
+                                <td class="ta-center">보람아*</td>
                             </tr>
                             @@for (var i = 0; i < 9; i++) { <tr>
-                                <td class="ta-left">6월 신용카드 무이자 할부 혜택 안내</td>
-                                <td class="ta-center">2015.06.01</td>
+                                <td class="ta-left">가성비 넘치는 이엔티비 32인치의 퍼포먼스</td>
+                                <td class="ta-center">DIEN32H-MT</td>
+                                <td class="ta-center">보람아*</td>
                                 </tr>
                                 }
                         </tbody>
@@ -94,7 +103,7 @@
             </div>
         </div>
     </section>
-    <!-- /.sec support-notice-sec -->
+    <!-- /.sec review-sec -->
 
 </main>
 <!-- /.main.container -->

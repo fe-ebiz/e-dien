@@ -80,8 +80,14 @@ body#mainPage {
 
 #mainPage {
     .header {
+        height: $hd-ht-pc-main;
+
+        .allmenu-wrapper {
+            display: none;
+        }
+
         .gnb {
-            height: auto;
+            height: $hd-ht-pc-main;
             background-color: #000;
 
             &:after {
@@ -123,8 +129,53 @@ body#mainPage {
     $hd-ht-down: $hd-ht-pc - 20;
     z-index: 10;
     width: 100%;
-    // height: $hd-ht;
+    height: $hd-ht-pc+$hd-ht-pc-allmenu;
     // margin-bottom: $line-ht;
+
+    .allmenu-wrapper {
+        height: $hd-ht-pc-allmenu;
+        background-color: $primary-color;
+        color: #fff;
+
+        .allmenu-content {
+            height: 100%;
+
+            .allmenu-cover {
+                float: left;
+                @include va-bef(100%);
+
+                .allmenu-tab {
+                    @include ap-reset;
+                    @include size(15px, 100%);
+                    margin-right: 7px;
+
+                    .bar {
+                        position: relative;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #dfa4c5;
+
+                        &:nth-child(2) {
+                            margin-top: 3px;
+                            margin-bottom: 3px;
+                        }
+                    }
+                }
+            }
+
+            .link-cover {
+                @include va-bef(100%);
+                float: right;
+
+                a:not(:first-child) {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
 
     .gnb {
         // @include pos(fixed, 0, 0);
@@ -241,7 +292,7 @@ body#mainPage {
                         &+.menu2-bg {
                             display: none;
                             position: fixed;
-                            top: $hd-ht-pc;
+                            top: $hd-ht-pc+$hd-ht-pc-allmenu;
                             left: 0;
                             width: 100%;
                             height: 44px;
@@ -274,6 +325,7 @@ body#mainPage {
         }
 
         &.affix {
+            top: 0;
             height: $hd-ht-down;
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
@@ -299,22 +351,9 @@ body#mainPage {
                 >li {
                     padding: 7px 0 !important;
                 }
-            }
 
-            .gnb-area {
-
-                .tel-cover .tel-img-white,
-                .logo-cover .logo .logo-img-1 {
-                    display: none !important;
-                }
-
-                .tel-cover .tel-img-black,
-                .logo-cover .logo .logo-img-2 {
-                    display: inline-block !important;
-                }
-
-                .nav-bar .main-nav .menu>li>a {
-                    color: $font-color;
+                &+.menu2-bg {
+                    top: $hd-ht-down !important;
                 }
             }
         }
@@ -661,6 +700,34 @@ body:not(#mainPage) {
     }
 }
 
+#newsPage,
+#reviewPage,
+#supportPage .sec {
+    font-size: 16px;
+    color: $font-gray;
+    line-height: 1.7;
+}
+
+// subpage visual 영역
+$items: (brand, support, review, faq, news);
+
+@each $item in $items {
+    .#{$item}-visual-sec {
+        position: relative;
+
+        .visual-wrapper {
+            .visual-content {
+                height: 205px;
+                background: url('/img/#{$item}/pagetitle_bg.jpg') no-repeat center / cover;
+
+                .visual-title {
+                    text-align: center;
+                    padding-top: 88px;
+                }
+            }
+        }
+    }
+}
 
 @include screen-md {}
 
