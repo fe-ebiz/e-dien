@@ -11,6 +11,9 @@ $(function () {
     if ($('#faqPage').length) {
         faq.init();
     }
+    if ($('#entvPage').length) {
+        entv.init();
+    }
 });
 
 // commonUI
@@ -18,7 +21,7 @@ var common = {
     init: function () {
         // common.load();
         common.scroll();
-        common.nav();
+        // common.nav();
         // common.resize();
     },
     common: function () {
@@ -149,7 +152,8 @@ var common = {
 var main = {
     init: function () {
         // this.wayPoint();
-        this.visualBannerList()
+        this.visualBannerList();
+        this.visualTvListFn();
         // this.newsbarNewsList()
         // this.guideVideoList()
         // this.roadmapList()
@@ -168,6 +172,21 @@ var main = {
             // prevArrow: '<button type="button" class="slick-prev"><img src="/images/icon/btn_prev.png" alt="이전"></button>',
             // nextArrow: '<button type="button" class="slick-next"><img src="/images/icon/btn_next.png" alt="다음"></button>',
             // infinite: false,
+        });
+    },
+    visualTvListFn: function () {
+        $('#visualBannerList .visualTvList').slick({
+            autoplay: true,
+            autoplaySpeed: 5000,
+            appendArrows: '#bannerArrow',
+            pauseOnHover: false,
+            slidesToShow: 7,
+            slidesToScroll: 1,
+            infinite: false,
+            swipe: false,
+            // centerMode: true,
+            // prevArrow: '<button type="button" class="slick-prev"><img src="/images/icon/btn_prev.png" alt="이전"></button>',
+            // nextArrow: '<button type="button" class="slick-next"><img src="/images/icon/btn_next.png" alt="다음"></button>',
         });
     },
     newsbarNewsList: function () {
@@ -235,35 +254,35 @@ var main = {
             // infinite: false,
         });
     },
-    // lookCardList: function () {
-    //     $('#lookCardList').slick({
-    //         autoplay: true,
-    //         autoplaySpeed: 2000,
-    //         centerMode: true,
-    //         centerPadding: '100px',
-    //         slidesToShow: 3,
-    //         // slidesToShow: 'auto',
-    //         infinite: true,
-    //         // infinite: false,
-    //         responsive: [{
-    //                 breakpoint: 1360,
-    //                 settings: {
-    //                     centerMode: true,
-    //                     centerPadding: '100px',
-    //                     slidesToShow: 2,
-    //                 }
-    //             },
-    //             {
-    //                 breakpoint: 992,
-    //                 settings: {
-    //                     centerMode: true,
-    //                     centerPadding: '60px',
-    //                     slidesToShow: 1,
-    //                 }
-    //             },
-    //         ],
-    //     });
-    // },
+    lookCardList: function () {
+        $('#lookCardList').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            centerMode: true,
+            centerPadding: '100px',
+            slidesToShow: 3,
+            // slidesToShow: 'auto',
+            infinite: true,
+            // infinite: false,
+            responsive: [{
+                    breakpoint: 1360,
+                    settings: {
+                        centerMode: true,
+                        centerPadding: '100px',
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        centerMode: true,
+                        centerPadding: '60px',
+                        slidesToShow: 1,
+                    }
+                },
+            ],
+        });
+    },
     wayPoint: function () {
         $('#container .wayp-item').each(function (index, item) {
             $(item).addClass('blind');
@@ -321,6 +340,59 @@ var faq = {
     },
     faqListTabFn: function () {
         toggleOn($('#faqList .faq-item'));
+    }
+}
+// entvUI
+var entv = {
+    init: function () {
+        this.scrollFn();
+        this.scrollLinkFn();
+        this.productListFn();
+    },
+    data: function () {
+        var hdHtDown = 60;
+        var allmenuHt = $('#header .allmenu-wrapper').outerHeight();
+        var entvProductContentHt = $('#entvProductContent').outerHeight();
+        return {
+            hdHtDown,
+            allmenuHt,
+            entvProductContentHt
+        }
+    },
+    scrollFn: function () {
+        var $entvProductContent = $('#entvProductContent');
+        // var allmenuHt = $('#header .allmenu-wrapper').outerHeight();
+        var thisTop = $entvProductContent.offset().top - this.data().allmenuHt - 20;
+        $(window).on('scroll', function () {
+            var scr = $(window).scrollTop();
+            if (scr > thisTop) {
+                $entvProductContent.addClass('affix');
+            } else {
+                $entvProductContent.removeClass('affix');
+            }
+        });
+    },
+    scrollLinkFn: function () {
+        var ht = this.data().entvProductContentHt + this.data().allmenuHt;
+        var $entvTitle = $('#entvTitle');
+        $entvTitle.find('.spec-btn').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').stop().scrollTop($($(this).attr('href')).offset().top - ht);
+        })
+    },
+    productListFn: function () {
+        $('#entvProductList').slick({
+            // autoplay: true,
+            autoplaySpeed: 5000,
+            appendArrows: '#bannerArrow',
+            pauseOnHover: false,
+            slidesToShow: 7,
+            slidesToScroll: 1,
+            infinite: false,
+            // centerMode: true,
+            // prevArrow: '<button type="button" class="slick-prev"><img src="/images/icon/btn_prev.png" alt="이전"></button>',
+            // nextArrow: '<button type="button" class="slick-next"><img src="/images/icon/btn_next.png" alt="다음"></button>',
+        });
     }
 }
 
@@ -481,7 +553,9 @@ function dataFn() {
                 obj.removeClass('leave');
             }, 300);
             $("#wrap").attr('aria-hidden', false);
-            lastFocus.focus();
+            if (lastFocus) {
+                lastFocus.focus();
+            }
         }
     }
 }

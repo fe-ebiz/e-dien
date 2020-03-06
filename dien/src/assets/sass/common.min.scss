@@ -696,29 +696,22 @@ body:not(#mainPage) {
 
         .point {
             color: $primary-font-color;
+            font-weight: 700;
         }
     }
 }
 
-#newsPage,
-#reviewPage,
-#supportPage .sec {
-    font-size: 16px;
-    color: $font-gray;
-    line-height: 1.7;
-}
-
 // subpage visual 영역
-$items: (brand, support, review, faq, news);
+$pages: (entv, praen, spider, brand, support, review, faq, news);
 
-@each $item in $items {
-    .#{$item}-visual-sec {
+@each $page in $pages {
+    .#{$page}-visual-sec {
         position: relative;
 
         .visual-wrapper {
             .visual-content {
                 height: 205px;
-                background: url('/img/#{$item}/pagetitle_bg.jpg') no-repeat center / cover;
+                background: url('/img/#{$page}/pagetitle_bg.jpg') no-repeat center / cover;
 
                 .visual-title {
                     text-align: center;
@@ -726,6 +719,16 @@ $items: (brand, support, review, faq, news);
                 }
             }
         }
+    }
+}
+
+$pages-sec: (entv, praen, spider, brand, support, review, faq, news);
+
+@each $item in $pages-sec {
+    ##{$item}Page section.sec {
+        font-size: 16px;
+        color: #707070;
+        line-height: 1.7;
     }
 }
 

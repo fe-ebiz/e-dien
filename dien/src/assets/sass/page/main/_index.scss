@@ -49,19 +49,43 @@
                             animation-fill-mode: both;
                             visibility: hidden;
 
-                            .tv-list {
+                            .product-list-wrapper {
+                                position: relative;
+                                width: 730px;
+                                margin: 0 auto;
+                            }
+
+                            .product-list {
                                 font-size: 0;
                                 text-align: center;
 
-                                .tv-item {
+                                .product-item {
+                                    float: initial !important;
                                     display: inline-block;
-                                    margin: 0 15px;
+                                    // margin: 0 5px;
+                                    height: 84px;
+                                    vertical-align: bottom;
+
+                                    // &:first-child {
+                                    //     margin-left: 0px;
+                                    // }
+
+                                    // &:last-child {
+                                    //     margin-right: 0px;
+                                    // }
+                                    a {
+                                        outline: none;
+                                    }
 
                                     .picture {
+                                        position: relative;
+                                        top: 5px;
+                                        height: 79px;
 
                                         >img {
                                             position: relative;
                                             display: inline-block;
+                                            height: 61px;
                                             transition: all .15s linear;
 
                                             &:hover {
@@ -73,12 +97,18 @@
                                             margin-top: 5px;
                                             font-size: 13px;
                                             color: #fff;
-                                            letter-spacing: -0.7px;
+                                            letter-spacing: -1px;
                                         }
                                     }
 
                                     &.pdt-55uhd-curved {
-                                        margin: 0 3px;
+
+                                        figcaption {
+                                            position: absolute;
+                                            white-space: nowrap;
+                                            left: 50%;
+                                            transform: translateX(-50%);
+                                        }
                                     }
                                 }
                             }
