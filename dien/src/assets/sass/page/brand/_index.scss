@@ -37,7 +37,11 @@
 }
 
 .brand-terms-sec {
-    .brand-terms-wrapper {
-        .brand-terms-content {}
+    .terms-wrapper {
+        .terms-content {
+            .text-wrapper {
+                margin-top: 30px;
+            }
+        }
     }
 }
