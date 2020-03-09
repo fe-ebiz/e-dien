@@ -130,7 +130,7 @@
 
                         @for $i from 1 through 5 {
                             &.item-#{$i} {
-                                background: url('http://img.entv.co.kr/dien/main/visual/visual_#{$i}.jpg') no-repeat center / cover;
+                                background: url('/img/main/visual/visual_#{$i}.jpg') no-repeat center / cover;
                             }
                         }
 

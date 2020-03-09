@@ -11,8 +11,8 @@ $(function () {
     if ($('#faqPage').length) {
         faq.init();
     }
-    if ($('#entvPage').length) {
-        entv.init();
+    if ($('#prdDetailPage').length) {
+        prdDetail.init();
     }
 });
 
@@ -342,8 +342,8 @@ var faq = {
         toggleOn($('#faqList .faq-item'));
     }
 }
-// entvUI
-var entv = {
+// prdDetailUI
+var prdDetail = {
     init: function () {
         this.scrollFn();
         this.scrollLinkFn();

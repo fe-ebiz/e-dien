@@ -1,4 +1,4 @@
-.entv-product-sec {
+.dien-prdname-sec {
     $product-ht: 127px;
     height: $product-ht;
 
@@ -31,7 +31,7 @@
                 .product-item {
                     float: initial !important;
                     display: inline-block;
-                    margin: 0 28px;
+                    margin: 0 27px;
                     height: 84px;
                     vertical-align: bottom;
 
@@ -99,9 +99,9 @@
     }
 }
 
-.sec.entv-sec {
-    .entv-wrapper {
-        .entv-content {
+.dien-prdinfo-sec {
+    .info-wrapper {
+        .info-content {
             h1.title {
                 @include va-box;
                 line-height: 1;

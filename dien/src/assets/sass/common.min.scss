@@ -702,7 +702,7 @@ body:not(#mainPage) {
 }
 
 // subpage visual 영역
-$pages: (entv, praen, spider, brand, support, review, faq, news);
+$pages: (brand, support, review, faq, news);
 
 @each $page in $pages {
     .#{$page}-visual-sec {
@@ -722,7 +722,27 @@ $pages: (entv, praen, spider, brand, support, review, faq, news);
     }
 }
 
-$pages-sec: (entv, praen, spider, brand, support, review, faq, news);
+$pages: (entv, praen, spider);
+
+@each $page in $pages {
+    .#{$page}-visual-sec {
+        position: relative;
+
+        .visual-wrapper {
+            .visual-content {
+                height: 205px;
+                background: url('/img/product/#{$page}/pagetitle_bg.jpg') no-repeat center / cover;
+
+                .visual-title {
+                    text-align: center;
+                    padding-top: 88px;
+                }
+            }
+        }
+    }
+}
+
+$pages-sec: (prdDetail, brand, support, review, faq, news);
 
 @each $item in $pages-sec {
     ##{$item}Page section.sec {

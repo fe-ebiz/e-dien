@@ -1,11 +1,11 @@
-@@include('../inc/_top.html', { "pageName": "entv" })
+@@include('../inc/_top.html', { "pageName": "prdDetail" })
 
 <main id="container" class="container" role="main">
     <section class="sec entv-visual-sec">
         <div class="visual-wrapper">
             <div class="visual-content">
                 <h1 class="visual-title">
-                    <img src="/img/entv/pagetitle.png" alt="고객지원">
+                    <img src="/img/product/entv/pagetitle.png" alt="고객지원">
                 </h1>
             </div>
         </div>
@@ -17,16 +17,17 @@
     })
 
 
-    <div class="entv-product-sec wrapper-type1">
+    <section class="dien-prdname-sec wrapper-type1">
         <div class="product-wrapper group-f">
             <div class="product-content group" id="entvProductContent">
+                <h1 class="sr-only">상품 종류 탭</h1>
                 <div class="product-list-wrapper">
                     <ul class="product-list cf" id="entvProductList">
                         <!-- 해당 탭 클래스 on 추가 -->
                         <li class="product-item on">
                             <a href="./index.html?prdCd=EN-SL230S">
                                 <figure class="picture">
-                                    <img src="http://img.entv.co.kr/dien/main/product/32hd_1.png" alt="32인치 HD">
+                                    <img src="/img/product/entv/list/32hd_1.png" alt="32인치 HD">
                                     <figcaption>32인치 HD</figcaption>
                                 </figure>
                             </a>
@@ -34,7 +35,7 @@
                         <li class="product-item">
                             <a href="./index.html?prdCd=DIEN32H-MT">
                                 <figure class="picture">
-                                    <img src="http://img.entv.co.kr/dien/main/product/32hd_2.png" alt="32인치 HD">
+                                    <img src="/img/product/entv/list/32hd_2.png" alt="32인치 HD">
                                     <figcaption>32인치 HD</figcaption>
                                 </figure>
                             </a>
@@ -42,7 +43,7 @@
                         <li class="product-item">
                             <a href="./index.html?prdCd=DIEN40F-KT">
                                 <figure class="picture">
-                                    <img src="http://img.entv.co.kr/dien/main/product/40fhd.png" alt="40인치 FHD">
+                                    <img src="/img/product/entv/list/40fhd.png" alt="40인치 FHD">
                                     <figcaption>40인치 FHD</figcaption>
                                 </figure>
                             </a>
@@ -50,7 +51,7 @@
                         <li class="product-item">
                             <a href="./index.html?prdCd=DIEN43U-MT">
                                 <figure class="picture">
-                                    <img src="http://img.entv.co.kr/dien/main/product/43uhd.png" alt="43인치 UHD">
+                                    <img src="/img/product/entv/list/43uhd.png" alt="43인치 UHD">
                                     <figcaption>43인치 UHD</figcaption>
                                 </figure>
                             </a>
@@ -58,7 +59,7 @@
                         <li class="product-item">
                             <a href="./index.html?prdCd=EN-SL550U">
                                 <figure class="picture">
-                                    <img src="http://img.entv.co.kr/dien/main/product/55uhd.png" alt="55인치 UHD">
+                                    <img src="/img/product/entv/list/55uhd.png" alt="55인치 UHD">
                                     <figcaption>55인치 UHD</figcaption>
                                 </figure>
                             </a>
@@ -66,7 +67,7 @@
                         <li class="product-item pdt-55uhd-curved">
                             <a href="./index.html?prdCd=EN-SL550CU">
                                 <figure class="picture">
-                                    <img src="http://img.entv.co.kr/dien/main/product/55uhd_curved.png" alt="55인치 UHD 커브드">
+                                    <img src="/img/product/entv/list/55uhd_curved.png" alt="55인치 UHD 커브드">
                                     <figcaption>55인치 UHD 커브드</figcaption>
                                 </figure>
                             </a>
@@ -74,7 +75,7 @@
                         <li class="product-item">
                             <a href="./index.html?prdCd=DIEN65U-KT">
                                 <figure class="picture">
-                                    <img src="http://img.entv.co.kr/dien/main/product/65uhd.png" alt="65인치 UHD">
+                                    <img src="/img/product/entv/list/65uhd.png" alt="65인치 UHD">
                                     <figcaption>65인치 UHD</figcaption>
                                 </figure>
                             </a>
@@ -83,11 +84,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <section class="sec entv-sec">
-        <div class="entv-wrapper wrapper-type1">
-            <div class="entv-content group group-type1">
+    <section class="sec dien-prdinfo-sec">
+        <div class="info-wrapper wrapper-type1">
+            <div class="info-content group group-type1">
                 <!-- 쿼리 스트링 받아 상세페이지 구현 -->
                 <!-- 예시 상세 페이지 -->
                 <h1 class="title-type1 title" id="entvTitle">
@@ -98,7 +99,7 @@
                         제품사양 및 구성
                     </a>
                 </h1>
-                <div class="entv-detail-wrapper">
+                <div class="info-detail-wrapper">
                     <img src="http://img.entv.co.kr/32_new/1020/01.jpg"><br>
                     <img src="http://img.entv.co.kr/32_new/1020/02.jpg"><br>
                     <img src="http://img.entv.co.kr/32_new/1020/03.jpg"><br>
@@ -194,7 +195,7 @@
             </div>
         </div>
     </section>
-    <!-- /.sec entv-sec -->
+    <!-- /.sec dien-prdinfo-sec -->
 
 </main>
 <!-- /.main.container -->
