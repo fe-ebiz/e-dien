@@ -88,8 +88,12 @@ var common = {
         // console.log(headerHt);
         $(window).on('scroll', function () {
             var scr = $(window).scrollTop();
+            // console.log(gnb.offset().bottom);
+            // console.log(gnb.offset().top);
+            $('.menu2-bg').css('top', $('#header').height() - scr);
             if (scr > headerHt) {
                 gnb.addClass('affix');
+                $('.menu2-bg')
             } else {
                 gnb.removeClass('affix');
             }

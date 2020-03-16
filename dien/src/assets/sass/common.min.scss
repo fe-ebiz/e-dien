@@ -63,6 +63,14 @@ body:not(#mainPage) {
                     bottom: 0;
                     background-color: $primary-color;
                 }
+
+                &.on {
+
+                    .menu2-bg,
+                    .menu2 {
+                        display: block !important;
+                    }
+                }
             }
         }
     }
@@ -100,7 +108,7 @@ body#mainPage {
 
             .logo-cover {
                 &:after {
-                    height: $hd-ht-pc-main;
+                    height: $hd-ht-pc-main !important;
                 }
             }
 
@@ -119,6 +127,10 @@ body#mainPage {
                 }
 
             }
+
+            &.affix {
+                border-top: none;
+            }
         }
     }
 }
@@ -126,7 +138,8 @@ body#mainPage {
 .header {
     $line-ht: 6px;
     // $hd-ht-pc: 80px;
-    $hd-ht-down: $hd-ht-pc - 20;
+    // $hd-ht-down: $hd-ht-pc - 20;
+    $hd-ht-down: $hd-ht-pc + 4;
     z-index: 10;
     width: 100%;
     height: $hd-ht-pc+$hd-ht-pc-allmenu;
@@ -282,6 +295,7 @@ body#mainPage {
 
                             >a {}
 
+                            &.on,
                             &:hover {
                                 a {
                                     color: $primary-font-color;
@@ -328,28 +342,29 @@ body#mainPage {
             top: 0;
             height: $hd-ht-down;
             background-color: #fff;
+            border-top: 4px solid $primary-color;
             box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
 
             .logo-cover {
                 &:after {
-                    height: $hd-ht-down !important;
+                    // height: $hd-ht-down !important;
                 }
             }
 
             .gnb-area .nav-bar .main-nav .menu>li {
                 &:before {
-                    height: $hd-ht-down !important;
+                    // height: $hd-ht-down !important;
                 }
             }
 
             .menu2 {
-                top: $hd-ht-down !important;
-                box-shadow: 0px 2px 5px rgba(0, 0, 0, .12);
-                font-size: 14px !important;
-                padding: 7px 0 !important;
+                // top: $hd-ht-down !important;
+                // box-shadow: 0px 2px 5px rgba(0, 0, 0, .12);
+                // // font-size: 14px !important;
+                // // padding: 7px 0 !important;
 
                 >li {
-                    padding: 7px 0 !important;
+                    // padding: 7px 0 !important;
                 }
 
                 &+.menu2-bg {
@@ -432,7 +447,6 @@ body:not(#mainPage) {
 
         .address {
             margin-top: 15px;
-            font-weight: 200;
 
             .text+.text {
                 margin-top: 20px;
@@ -722,7 +736,7 @@ $pages: (brand, support, review, faq, news);
     }
 }
 
-$pages: (entv, praen, spider);
+$pages: (entv, praen, spyder);
 
 @each $page in $pages {
     .#{$page}-visual-sec {

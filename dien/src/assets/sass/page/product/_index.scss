@@ -14,7 +14,7 @@
 
             &.affix {
                 z-index: 1;
-                top: $hd-ht-pc-main;
+                top: $hd-ht-pc + 4;
                 left: 50%;
                 transform: translateX(-50%);
             }
@@ -116,7 +116,7 @@
                     font-size: 28px;
                     color: #898989;
                     font-weight: 500;
-                    letter-spacing: -1.5px;
+                    letter-spacing: -2px;
                 }
 
                 .btn {
@@ -144,6 +144,10 @@
                         margin-left: 5px;
                     }
                 }
+            }
+
+            .info-detail-wrapper {
+                margin-top: 30px;
             }
         }
     }
