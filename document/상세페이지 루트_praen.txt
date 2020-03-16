@@ -1,0 +1,8 @@
+디스포저 홈페이지 적용 주소
+
+<img src="http://img.entv.co.kr/praen/sample/01.jpg"><br>
+<img src="http://img.entv.co.kr/praen/sample/00.jpg"><br>
+<img src="http://img.entv.co.kr/praen/sample/02.jpg"><br>
+<img src="http://img.entv.co.kr/praen/sample/03.jpg"><br>
+<img src="http://img.entv.co.kr/praen/sample/04.jpg"><br>  <----- 제품사양 연결부분
+<img src="http://img.entv.co.kr/praen/sample/05.jpg">
