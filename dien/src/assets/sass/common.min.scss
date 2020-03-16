@@ -711,7 +711,7 @@ $pages: (brand, support, review, faq, news);
         .visual-wrapper {
             .visual-content {
                 height: 205px;
-                background: url('/img/#{$page}/pagetitle_bg.jpg') no-repeat center / cover;
+                background: url('http://img.entv.co.kr/dien/#{$page}/pagetitle_bg.jpg') no-repeat center / cover;
 
                 .visual-title {
                     text-align: center;
@@ -731,7 +731,7 @@ $pages: (entv, praen, spider);
         .visual-wrapper {
             .visual-content {
                 height: 205px;
-                background: url('/img/product/#{$page}/pagetitle_bg.jpg') no-repeat center / cover;
+                background: url('http://img.entv.co.kr/dien/product/#{$page}/pagetitle_bg.jpg') no-repeat center / cover;
 
                 .visual-title {
                     text-align: center;

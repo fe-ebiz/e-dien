@@ -1,0 +1,45 @@
+@@include('../inc/_top.html', { "pageName": "prdDetail" })
+
+<main id="container" class="container" role="main">
+    <section class="sec praen-visual-sec">
+        <div class="visual-wrapper">
+            <div class="visual-content">
+                <h1 class="visual-title">
+                    <img src="http://img.entv.co.kr/dien/product/praen/pagetitle.png" alt="프라엔 디스포저">
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    @@include('../inc/common/_path.html', {
+    "path1": "프라엔",
+    "path2": "<span class='arr'>▶</span> <a href='#' class='point'><span class='label'>프라엔 디스포저</span></a>"
+    })
+
+    <section class="sec dien-prdinfo-sec">
+        <div class="info-wrapper wrapper-type1">
+            <div class="info-content group group-type1">
+                <h1 class="title-type1 title" id="entvTitle">
+                    <img src="http://img.entv.co.kr/dien/common/logo_praen.png" alt="이엔티비" class="logo-praen">
+                    <a href="#spec" class="btn spec-btn">
+                        <img src="http://img.entv.co.kr/dien/common/icon/icon_settings.png" alt="사양" class="icon">
+                        제품사양 및 구성
+                    </a>
+                </h1>
+                <div class="info-detail-wrapper">
+                    <img src="http://img.entv.co.kr/praen/sample/01.jpg"><br>
+                    <img src="http://img.entv.co.kr/praen/sample/00.jpg"><br>
+                    <img src="http://img.entv.co.kr/praen/sample/02.jpg"><br>
+                    <img src="http://img.entv.co.kr/praen/sample/03.jpg"><br>
+                    <img src="http://img.entv.co.kr/praen/sample/04.jpg" id="spec"><br>
+                    <img src="http://img.entv.co.kr/praen/sample/05.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.sec dien-prdinfo-sec -->
+
+</main>
+<!-- /.main.container -->
+
+@@include('../inc/_bottom.html')

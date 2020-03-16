@@ -362,15 +362,17 @@ var prdDetail = {
     scrollFn: function () {
         var $entvProductContent = $('#entvProductContent');
         // var allmenuHt = $('#header .allmenu-wrapper').outerHeight();
-        var thisTop = $entvProductContent.offset().top - this.data().allmenuHt - 20;
-        $(window).on('scroll', function () {
-            var scr = $(window).scrollTop();
-            if (scr > thisTop) {
-                $entvProductContent.addClass('affix');
-            } else {
-                $entvProductContent.removeClass('affix');
-            }
-        });
+        if ($entvProductContent.length) {
+            var thisTop = $entvProductContent.offset().top - this.data().allmenuHt - 20;
+            $(window).on('scroll', function () {
+                var scr = $(window).scrollTop();
+                if (scr > thisTop) {
+                    $entvProductContent.addClass('affix');
+                } else {
+                    $entvProductContent.removeClass('affix');
+                }
+            });
+        }
     },
     scrollLinkFn: function () {
         var ht = this.data().entvProductContentHt + this.data().allmenuHt;
